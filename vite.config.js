@@ -27,6 +27,9 @@ function inlineEmiter(template) {
     name: "emit-inline-fmreact",
     async generateBundle(opts, bundle) {
       const code = bundle[opts.entryFileNames].code;
+      const svg = bundle[opts.entryFileNames].viteMetadata;
+      console.log("svg##########", svg.importedAssets);
+      // console.log("options", opts);
       const output = fs
         .readFileSync(template, "utf-8")
         .replace("%%script%%", () => code);
