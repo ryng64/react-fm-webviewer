@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 // import react from "@vitejs/plugin-react";
 import path from "path";
+import { exec } from "child_process";
 import fs from "fs";
 
 // function inlineReact(template) {
@@ -44,18 +45,14 @@ function inlineEmiter(template) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react({ emitCss: false }),
-    // inlineReact("./src/template.html"),
-    inlineEmiter("./src/template.html"),
-  ],
+  plugins: [react(), inlineEmiter("./src/template.html")],
   build: {
     rollupOptions: {
       input: "src/main.jsx",
       output: {
         // entryFileNames
         format: "iife",
-        entryFileNames: "deploy/index.html",
+        entryFileNames: "deploy/index.js",
         name: "app",
       },
     },
