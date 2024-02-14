@@ -3,6 +3,8 @@ function FmCount({ count }) {
     message: `the total count is ${count}`,
   };
 
+  //Both buttons call a fileMaker Script. Only 1 parameter can be passed and Objects (eg msg) need to be "stringified" before being passed.
+  //Use FileMakers JSONGetElement() functions to access JSON parameters from JavaScript.
   return (
     <>
       <div className="card">

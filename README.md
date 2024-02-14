@@ -1,16 +1,21 @@
 # React + Vite + Claris FM
 
-Tooling to create widgets for FileMaker's WebViewer.
-This project bundles a React project into a single file that is uploaded to into a FileMaker field.
-
-## Scope
-
-A react template to create supplemental UI widgets in FileMaker with:
+A react starter template to create supplemental UI widgets in FileMaker with:
 
 - Offline Support
-- No need web server.
+- No need for web server.
 
-### FileMaker Interactions
+This project bundles a React project into a single file that is uploaded to into a FileMaker field.
+This tooling is intended to serve as a base for creating small widgets for FileMaker's WebViewer.
+
+## FileMaker Interactions
+
+running `npm run build` while webviewdepoly.fmp12 is open, will automatically upload the `dist/index.html` to the `wvd::html` field.
+Review `uploadToFM.js` to customize this interaction.
+
+- Requires Enabled fmurlscript by going to Manage Security>Advanced Security > Extended Privileges
+
+### Sample Functions
 
 2 JavaScript functions that interact with FileMaker
 

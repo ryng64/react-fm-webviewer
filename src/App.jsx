@@ -7,6 +7,8 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  // Allow function to access the state methods in React
+  // and define the function at the window level ( eg. window.myFunction = myFunction ). FileMaker will be able to access functions declared in "window"
   function callFromFM(sp) {
     // SP is sent as String. Parse for JSON
     setCount(count + 10);
@@ -18,6 +20,7 @@ function App() {
     }
 
     let message = null;
+    //Handle if Object was passed vs a string
     if (typeof scriptParameter === "object" && scriptParameter !== null) {
       message = scriptParameter.message;
     } else {
@@ -48,6 +51,7 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+      {/* FmCount compomonent contains samples of interacting with FileMaker Scripts/Parameters */}
       <FmCount count={count} />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
