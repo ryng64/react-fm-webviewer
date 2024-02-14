@@ -1,18 +1,30 @@
-import { useEffect, useState } from "react";
-
-function getFoundCount() {
-  const [foundCount, setfoundCount] = useState(0);
+function FmCount({ count }) {
+  const msg = {
+    message: `the total count is ${count}`,
+  };
 
   return (
     <>
-      <input type="text" value={foundCount} id="fc" />
-      <button
-        onClick={() => {
-          setfoundCount(foundCount * 2);
-        }}
-      >
-        effect
-      </button>
+      <div className="card">
+        <button
+          onClick={() => {
+            FileMaker.PerformScript("callFromWeb", `count is ${count}`);
+          }}
+        >
+          Perform Script Message {count}
+        </button>
+      </div>
+      <div className="card">
+        <button
+          onClick={() => {
+            FileMaker.PerformScript("callFromWeb", JSON.stringify(msg));
+          }}
+        >
+          {`Perform Script { Message : ${count} }`}
+        </button>
+      </div>
     </>
   );
 }
+
+export default FmCount;

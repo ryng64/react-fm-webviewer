@@ -5,7 +5,21 @@ This project bundles a React project into a single file that is uploaded to into
 
 ## Scope
 
-The intention for this project is to be quick react template to create small supplemental UI widgets that can be used in FileMaker ofline.
+A react template to create supplemental UI widgets in FileMaker with:
+
+- Offline Support
+- No need web server.
+
+### FileMaker Interactions
+
+2 JavaScript functions that interact with FileMaker
+review `fmcount.jsx` call FileMaker Scripts from the web app.
+review `App.jsx` to view function defintion inside of App and window level declaration
+
+2 FileMaker scripts that interact with WebViewer Javascript.
+
+- callFromWeb
+- callFromFileMaker
 
 ## ToDo:
 
@@ -18,6 +32,8 @@ The intention for this project is to be quick react template to create small sup
 - Compatible with React.
 - FileMaker Script to insert data from html file.
 - npm automate the bundle and Filemaker insert script.
+- Add Sample Perform FMscript from JavaScript
+- Add Sample Perform JavaScript from FM
 
 # Vite Stuff
 
