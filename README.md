@@ -13,8 +13,9 @@ A react template to create supplemental UI widgets in FileMaker with:
 ### FileMaker Interactions
 
 2 JavaScript functions that interact with FileMaker
-review `fmcount.jsx` call FileMaker Scripts from the web app.
-review `App.jsx` to view function defintion inside of App and window level declaration
+
+- review `fmcount.jsx` call FileMaker Scripts from the web app.
+- review `App.jsx` to view function defintion inside of App and window level declaration
 
 2 FileMaker scripts that interact with WebViewer Javascript.
 
