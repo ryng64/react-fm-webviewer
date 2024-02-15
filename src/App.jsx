@@ -10,8 +10,10 @@ function App() {
   // Allow function to access the state methods in React
   // and define the function at the window level ( eg. window.myFunction = myFunction ). FileMaker will be able to access functions declared in "window"
   function callFromFM(sp) {
-    // SP is sent as String. Parse for JSON
+    //update the state by 10 for fun
     setCount(count + 10);
+
+    // SP is sent as String. Parse for JSON
     let scriptParameter = null;
     if (isJsonString(sp)) {
       scriptParameter = JSON.parse(sp);
@@ -26,6 +28,7 @@ function App() {
     } else {
       message = scriptParameter;
     }
+    // right click web page > inspect and view the console.
     console.log(`Javascript Ran From Filemaker:`, message);
   }
 

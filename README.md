@@ -13,14 +13,14 @@ This tooling is intended to serve as a base for creating small widgets for FileM
 running `npm run build` while webviewdepoly.fmp12 is open, will automatically upload the `dist/index.html` to the `wvd::html` field.
 Review `uploadToFM.js` to customize this interaction.
 
-- Requires Enabled fmurlscript by going to Manage Security>Advanced Security > Extended Privileges
+- Requires Enabled fmurlscript by going to Manage Security > Advanced Security > Extended Privileges (if using a new file)
 
 ### Sample Functions
 
 2 JavaScript functions that interact with FileMaker
 
-- review `fmcount.jsx` call FileMaker Scripts from the web app.
-- review `App.jsx` to view function defintion inside of App and window level declaration
+- review `fmcount.jsx` to view FileMaker Scripts be called from the web app.
+- review `App.jsx` to view function defintion inside App() that becomes accessible to FileMaker
 
 2 FileMaker scripts that interact with WebViewer Javascript.
 
@@ -29,8 +29,11 @@ Review `uploadToFM.js` to customize this interaction.
 
 ## ToDo:
 
-- Bundle Assests inline ( images ) `will cause significantly larger files`
+- Bundle Assests inline ( svg, images ) `will cause significantly larger files`
 - Remove broken images/assets in Demo
+- automate bundle and insert Mac support and testing.
+- Button in FileMaker to run build.
+- FileMaker Layout for LocalHost Environment for live development in FM
 
 ## Complete
 
