@@ -5,6 +5,8 @@ A react starter template to create supplemental UI widgets in FileMaker with:
 - Offline Support
 - No need for web server.
 
+![](react-fm.gif)
+
 This project bundles a React project into a single file that is uploaded to into a FileMaker field.
 This tooling is intended to serve as a base for creating small widgets for FileMaker's WebViewer.
 
